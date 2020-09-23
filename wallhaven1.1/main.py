@@ -8,12 +8,12 @@ import requests
 from lxml import etree
 
 # NSFW分类请登录网址F12抓取Cookie,在此处填写!!!!
-cookie =""
-
+cookie = [""]
+ 
 def GetHeaders(): 
-    if len(cookie)>0:
+    if len(cookie[0])>0:
         headers = {
-            "cookie":cookie,
+            "cookie":cookie[0],
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5)\AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36"
         }
     else :
